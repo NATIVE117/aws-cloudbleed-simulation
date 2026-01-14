@@ -1,0 +1,253 @@
+{
+  "version": 4,
+  "terraform_version": "1.14.3",
+  "serial": 20,
+  "lineage": "2071eccf-8265-ab48-e2be-e10a09f940fa",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "azurerm_network_interface",
+      "name": "vm_nic",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "accelerated_networking_enabled": false,
+            "applied_dns_servers": [],
+            "auxiliary_mode": "",
+            "auxiliary_sku": "",
+            "dns_servers": [],
+            "edge_zone": "",
+            "id": "/subscriptions/25759eea-f9dc-49bb-8d83-a35a16f50e16/resourceGroups/CloudBleed-Project/providers/Microsoft.Network/networkInterfaces/victim-nic",
+            "internal_dns_name_label": "",
+            "internal_domain_name_suffix": "dm4nvezrqjuenpvpi3zf5byjrh.jx.internal.cloudapp.net",
+            "ip_configuration": [
+              {
+                "gateway_load_balancer_frontend_ip_configuration_id": "",
+                "name": "internal",
+                "primary": true,
+                "private_ip_address": "10.0.2.4",
+                "private_ip_address_allocation": "Dynamic",
+                "private_ip_address_version": "IPv4",
+                "public_ip_address_id": "/subscriptions/25759eea-f9dc-49bb-8d83-a35a16f50e16/resourceGroups/CloudBleed-Project/providers/Microsoft.Network/publicIPAddresses/victim-public-ip",
+                "subnet_id": "/subscriptions/25759eea-f9dc-49bb-8d83-a35a16f50e16/resourceGroups/CloudBleed-Project/providers/Microsoft.Network/virtualNetworks/Secure-VNet/subnets/Workload-Subnet-v2"
+              }
+            ],
+            "ip_forwarding_enabled": false,
+            "location": "southcentralus",
+            "mac_address": "",
+            "name": "victim-nic",
+            "private_ip_address": "10.0.2.4",
+            "private_ip_addresses": [
+              "10.0.2.4"
+            ],
+            "resource_group_name": "CloudBleed-Project",
+            "tags": {},
+            "timeouts": null,
+            "virtual_machine_id": ""
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "name": "victim-nic",
+            "resource_group_name": "CloudBleed-Project",
+            "subscription_id": "25759eea-f9dc-49bb-8d83-a35a16f50e16"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_public_ip.vm_public_ip",
+            "azurerm_resource_group.main",
+            "azurerm_subnet.workload",
+            "azurerm_virtual_network.vnet"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_public_ip",
+      "name": "vm_public_ip",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "allocation_method": "Static",
+            "ddos_protection_mode": "VirtualNetworkInherited",
+            "ddos_protection_plan_id": null,
+            "domain_name_label": null,
+            "domain_name_label_scope": null,
+            "edge_zone": "",
+            "fqdn": null,
+            "id": "/subscriptions/25759eea-f9dc-49bb-8d83-a35a16f50e16/resourceGroups/CloudBleed-Project/providers/Microsoft.Network/publicIPAddresses/victim-public-ip",
+            "idle_timeout_in_minutes": 4,
+            "ip_address": "20.97.10.17",
+            "ip_tags": {},
+            "ip_version": "IPv4",
+            "location": "southcentralus",
+            "name": "victim-public-ip",
+            "public_ip_prefix_id": null,
+            "resource_group_name": "CloudBleed-Project",
+            "reverse_fqdn": null,
+            "sku": "Standard",
+            "sku_tier": "Regional",
+            "tags": {},
+            "timeouts": null,
+            "zones": []
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIwIn0=",
+          "dependencies": [
+            "azurerm_resource_group.main"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "main",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/25759eea-f9dc-49bb-8d83-a35a16f50e16/resourceGroups/CloudBleed-Project",
+            "location": "southcentralus",
+            "managed_by": "",
+            "name": "CloudBleed-Project",
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "name": "CloudBleed-Project",
+            "subscription_id": "25759eea-f9dc-49bb-8d83-a35a16f50e16"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIwIn0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_subnet",
+      "name": "workload",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address_prefixes": [
+              "10.0.2.0/24"
+            ],
+            "default_outbound_access_enabled": true,
+            "delegation": [],
+            "id": "/subscriptions/25759eea-f9dc-49bb-8d83-a35a16f50e16/resourceGroups/CloudBleed-Project/providers/Microsoft.Network/virtualNetworks/Secure-VNet/subnets/Workload-Subnet-v2",
+            "ip_address_pool": [],
+            "name": "Workload-Subnet-v2",
+            "private_endpoint_network_policies": "Disabled",
+            "private_link_service_network_policies_enabled": true,
+            "resource_group_name": "CloudBleed-Project",
+            "service_endpoint_policy_ids": [],
+            "service_endpoints": [],
+            "sharing_scope": "",
+            "timeouts": null,
+            "virtual_network_name": "Secure-VNet"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "name": "Workload-Subnet-v2",
+            "resource_group_name": "CloudBleed-Project",
+            "subscription_id": "25759eea-f9dc-49bb-8d83-a35a16f50e16",
+            "virtual_network_name": "Secure-VNet"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.main",
+            "azurerm_virtual_network.vnet"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_virtual_network",
+      "name": "vnet",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address_space": [
+              "10.0.0.0/16"
+            ],
+            "bgp_community": "",
+            "ddos_protection_plan": [],
+            "dns_servers": [],
+            "edge_zone": "",
+            "encryption": [],
+            "flow_timeout_in_minutes": 0,
+            "guid": "93da3c1b-8231-4668-beaf-47725f87098f",
+            "id": "/subscriptions/25759eea-f9dc-49bb-8d83-a35a16f50e16/resourceGroups/CloudBleed-Project/providers/Microsoft.Network/virtualNetworks/Secure-VNet",
+            "ip_address_pool": [],
+            "location": "southcentralus",
+            "name": "Secure-VNet",
+            "private_endpoint_vnet_policies": "Disabled",
+            "resource_group_name": "CloudBleed-Project",
+            "subnet": [
+              {
+                "address_prefixes": [
+                  "10.0.1.0/24"
+                ],
+                "default_outbound_access_enabled": true,
+                "delegation": [],
+                "id": "/subscriptions/25759eea-f9dc-49bb-8d83-a35a16f50e16/resourceGroups/CloudBleed-Project/providers/Microsoft.Network/virtualNetworks/Secure-VNet/subnets/Workload-Subnet",
+                "name": "Workload-Subnet",
+                "private_endpoint_network_policies": "Disabled",
+                "private_link_service_network_policies_enabled": true,
+                "route_table_id": "",
+                "security_group": "",
+                "service_endpoint_policy_ids": [],
+                "service_endpoints": []
+              },
+              {
+                "address_prefixes": [
+                  "10.0.2.0/24"
+                ],
+                "default_outbound_access_enabled": true,
+                "delegation": [],
+                "id": "/subscriptions/25759eea-f9dc-49bb-8d83-a35a16f50e16/resourceGroups/CloudBleed-Project/providers/Microsoft.Network/virtualNetworks/Secure-VNet/subnets/Workload-Subnet-v2",
+                "name": "Workload-Subnet-v2",
+                "private_endpoint_network_policies": "Disabled",
+                "private_link_service_network_policies_enabled": true,
+                "route_table_id": "",
+                "security_group": "",
+                "service_endpoint_policy_ids": [],
+                "service_endpoints": []
+              }
+            ],
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "name": "Secure-VNet",
+            "resource_group_name": "CloudBleed-Project",
+            "subscription_id": "25759eea-f9dc-49bb-8d83-a35a16f50e16"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIwIn0=",
+          "dependencies": [
+            "azurerm_resource_group.main"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

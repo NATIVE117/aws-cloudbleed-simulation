@@ -1,0 +1,10 @@
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.zip
+.terraform.lock.hcl
+aws/
+cloudbleed_key
+cloudbleed_key.pub
+cloudbleed_key
+cloudbleed_key.pub
